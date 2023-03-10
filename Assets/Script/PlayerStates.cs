@@ -38,20 +38,17 @@ public class State_FindCoin : BaseState
     }
     public override void UpdateLogic() 
     {
-
-        if(((PlayerFSM)stateMachine).CoinCount < 5)
+        if (((PlayerFSM)stateMachine).CoinCount == 1)
         {
-
-            //((PlayerFSM)stateMachine)
-            if(GameStateManager.Instance.coins[0] != null)
+            stateMachine.ChangeState(((PlayerFSM)stateMachine).returnState);
+        }
+        else
+        {
+            if (GameStateManager.Instance.coins[0] != null)
             {
                 target = GameStateManager.Instance.coins[0].transform.position;
                 target = new Vector3(target.x, stateMachine.transform.position.y, target.z);
             }
-        }
-        else
-        {
-            stateMachine.ChangeState(((PlayerFSM)stateMachine).returnState);
         }
     }
     public override void UpdatePhysics() 
@@ -68,7 +65,7 @@ public class State_Standby : BaseState
     float timer = 0;
     float flashTimer = 0.2f;
     Color originalMat;
-    bool yellow = false;
+    bool green = false;
     public override void Enter()
     {
         originalMat = stateMachine.GetComponent<MeshRenderer>().material.color;
@@ -81,11 +78,11 @@ public class State_Standby : BaseState
         {
             if(flashTimer <= 0)
             {
-                if(yellow)
-                    stateMachine.GetComponent<MeshRenderer>().material.color = Color.yellow;
+                if(green)
+                    stateMachine.GetComponent<MeshRenderer>().material.color = Color.green;
                 else
                     stateMachine.GetComponent<MeshRenderer>().material.color = originalMat;
-                yellow = !yellow;
+                green = !green;
                 flashTimer = 0.2f;
             }
             flashTimer -= Time.deltaTime;

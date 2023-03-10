@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 528167062}
   - component: {fileID: 528167061}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 528167060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 60, y: 1, z: 60}
+  m_LocalScale: {x: 28.600262, y: 0.47667104, z: 28.600262}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -558,22 +558,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad20621cbb3159b4989ebdbb48018ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPerRun: 8
+  coinPerRun: 1
   coinPrefab: {fileID: 7026853160790399850, guid: 4d970b34180bd8b40a69ca094032fbed, type: 3}
   spawnPoint:
-  - {x: -18.73, y: 0, z: 0}
-  - {x: -14.67, y: 0, z: 8.54}
-  - {x: 18.2, y: 0, z: 8.54}
-  - {x: 18.2, y: 0, z: -17.32}
-  - {x: 1.5, y: 0, z: -11.02}
-  - {x: 1.5, y: 0, z: -16.9}
-  - {x: 9.35, y: 0, z: 16.34}
-  - {x: 9.35, y: 0, z: 4.2}
-  - {x: -13.77, y: 0, z: -11.9}
-  - {x: -6.16, y: 0, z: -11.9}
-  - {x: -6.16, y: 0, z: 21.6}
-  - {x: -10.7, y: 0, z: 21.6}
-  - {x: 3.1, y: 0, z: 25.85}
+  - {x: -12.4, y: 0, z: 0}
+  - {x: -3.87, y: 0, z: 9}
+  - {x: 11.3, y: 0, z: 12.05}
+  - {x: 12.5, y: 0, z: -12.6}
+  - {x: -1.2, y: 0, z: -11.09}
 --- !u!4 &1186696089
 Transform:
   m_ObjectHideFlags: 0
@@ -666,7 +658,7 @@ Transform:
   m_GameObject: {fileID: 1632729817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.52, y: 8.52, z: 8.52}
+  m_LocalScale: {x: 6.59, y: 6.59, z: 6.59}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
